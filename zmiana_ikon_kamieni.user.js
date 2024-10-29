@@ -7,50 +7,53 @@
 // @match        https://**.margonem.pl/
 // @grant        none
 // ==/UserScript==
-
 (function () {
     'use strict';
-    let a = [], b = ![];
-    const c = '1.0.0', d = '2024.10.05';
+    let _0x1c56a9 = [], _0x394c62 = ![];
+    const _0x4ec51c = '1.0.1', _0x585559 = '2024.10.29';
     console['log']('[Ikony\x20kamyków]\x20Załadowano\x20poprawnie\x20dodatek');
-    function e() {
-        const k = document['querySelectorAll']('.inner-grid'), l = [];
-        k['forEach'](m => {
-            const n = m['querySelectorAll']('div[data-name*=\x22Kamień\x20Czerwonego\x20Smoka\x22]');
-            n['forEach'](o => {
-                l['push'](o);
+    function _0x1a0ed0() {
+        const _0x44f9db = document['querySelectorAll']('.inner-grid'), _0x5ec023 = [];
+        _0x44f9db['forEach'](_0x1ea890 => {
+            const _0x59a77c = _0x1ea890['querySelectorAll']('div[data-name*=\x22Kamień\x20Czerwonego\x20Smoka\x22]');
+            _0x59a77c['forEach'](_0x3d2117 => {
+                _0x5ec023['push'](_0x3d2117);
             });
-        }), (l['length'] !== a['length'] || !l['every'](m => a['includes'](m))) && (a = l, b && h());
+        }), (_0x5ec023['length'] !== _0x1c56a9['length'] || !_0x5ec023['every'](_0x251650 => _0x1c56a9['includes'](_0x251650))) && (_0x1c56a9 = _0x5ec023, _0x394c62 && _0x387242());
     }
-    function f() {
+    function _0x122373() {
         if (document['getElementById']('kamien-menu'))
             return;
-        const k = document['createElement']('div');
-        k['id'] = 'kamien-menu', k['style']['position'] = 'fixed', k['style']['top'] = localStorage['getItem']('menuTop') || '20%', k['style']['left'] = localStorage['getItem']('menuLeft') || '30%', k['style']['width'] = '255px', k['style']['padding'] = '10px', k['style']['color'] = 'rgba(245,\x2013,\x20255,\x200.8)', k['style']['backgroundColor'] = 'rgba(0,\x200,\x200,\x200.8)', k['style']['border'] = '2px\x20solid\x20rgba(245,\x2013,\x20255,\x200.8)', k['style']['zIndex'] = '1000', k['style']['display'] = 'none';
-        const l = document['createElement']('h2');
-        l['textContent'] = 'Kamienie\x20w\x20ekwipunku', k['appendChild'](l);
-        const m = document['createElement']('div');
-        m['id'] = 'kamienie-list', k['appendChild'](m), document['body']['appendChild'](k), h(), g(k);
+        const _0x4ed9c5 = document['createElement']('div');
+        _0x4ed9c5['id'] = 'kamien-menu', _0x4ed9c5['style']['position'] = 'fixed', _0x4ed9c5['style']['top'] = localStorage['getItem']('menuTop') || '20%', _0x4ed9c5['style']['left'] = localStorage['getItem']('menuLeft') || '30%', _0x4ed9c5['style']['width'] = '255px', _0x4ed9c5['style']['padding'] = '10px', _0x4ed9c5['style']['color'] = 'rgba(245,\x2013,\x20255,\x200.8)', _0x4ed9c5['style']['backgroundColor'] = 'rgba(0,\x200,\x200,\x200.8)', _0x4ed9c5['style']['border'] = '2px\x20solid\x20rgba(245,\x2013,\x20255,\x200.8)', _0x4ed9c5['style']['zIndex'] = '1000', _0x4ed9c5['style']['display'] = 'none';
+        const _0x316c3d = document['createElement']('h2');
+        _0x316c3d['textContent'] = 'Kamienie\x20w\x20ekwipunku', _0x4ed9c5['appendChild'](_0x316c3d);
+        const _0xc30640 = document['createElement']('div');
+        _0xc30640['id'] = 'kamienie-list', _0x4ed9c5['appendChild'](_0xc30640), document['body']['appendChild'](_0x4ed9c5), _0x387242(), _0x289f88(_0x4ed9c5);
     }
-    function g(k) {
-        let l = ![], m = {
+    function _0x289f88(_0x48eae0) {
+        let _0x4c401f = ![], _0x716cfa = {
                 'x': 0x0,
                 'y': 0x0
             };
-        k['addEventListener']('mousedown', function (n) {
-            l = !![], m['x'] = n['clientX'] - k['getBoundingClientRect']()['left'], m['y'] = n['clientY'] - k['getBoundingClientRect']()['top'], k['style']['cursor'] = 'grabbing';
-        }), document['addEventListener']('mousemove', function (n) {
-            l && (k['style']['left'] = n['clientX'] - m['x'] + 'px', k['style']['top'] = n['clientY'] - m['y'] + 'px');
+        _0x48eae0['addEventListener']('mousedown', function (_0x2ab29e) {
+            _0x4c401f = !![], _0x716cfa['x'] = _0x2ab29e['clientX'] - _0x48eae0['getBoundingClientRect']()['left'], _0x716cfa['y'] = _0x2ab29e['clientY'] - _0x48eae0['getBoundingClientRect']()['top'], _0x48eae0['style']['cursor'] = 'grabbing';
+        }), document['addEventListener']('mousemove', function (_0x1ad507) {
+            _0x4c401f && (_0x48eae0['style']['left'] = _0x1ad507['clientX'] - _0x716cfa['x'] + 'px', _0x48eae0['style']['top'] = _0x1ad507['clientY'] - _0x716cfa['y'] + 'px');
         }), document['addEventListener']('mouseup', function () {
-            l && (l = ![], k['style']['cursor'] = 'grab', localStorage['setItem']('menuTop', k['style']['top']), localStorage['setItem']('menuLeft', k['style']['left']));
-        }), k['style']['cursor'] = 'grab';
+            _0x4c401f && (_0x4c401f = ![], _0x48eae0['style']['cursor'] = 'grab', localStorage['setItem']('menuTop', _0x48eae0['style']['top']), localStorage['setItem']('menuLeft', _0x48eae0['style']['left']));
+        }), _0x48eae0['style']['cursor'] = 'grab';
     }
-    function h() {
-        const k = document['getElementById']('kamienie-list');
-        k['innerHTML'] = '';
-        const l = [
+    function _0x387242() {
+        const _0x3daa06 = document['getElementById']('kamienie-list');
+        _0x3daa06['innerHTML'] = '';
+        const _0x1fa102 = [
             {
                 'name': 'Brak',
+                'src': ''
+            },
+            {
+                'name': '--\x20Elity\x20II\x20--',
                 'src': ''
             },
             {
@@ -424,46 +427,136 @@
             {
                 'name': 'Zorin\x20(300lvl)',
                 'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/e2/wl-mrozu01.gif'
+            },
+            {
+                'name': '--\x20Kolosi\x20--',
+                'src': ''
+            },
+            {
+                'name': 'Mamlambo\x20(36lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/kol/mamlambo_final2.gif'
+            },
+            {
+                'name': 'Regulus\x20Mętnooki\x20(63lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/kol/bazyliszek.gif'
+            },
+            {
+                'name': 'Umibozu\x20(90lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/kol/kolos-wodnik.gif'
+            },
+            {
+                'name': 'Amaimon\x20Soploręki\x20(117lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/kol/soploreki.gif'
+            },
+            {
+                'name': 'Hydrokora\x20Chimeryczna\x20(144lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/kol/hydrokora.gif'
+            },
+            {
+                'name': 'Lulukav\x20(198lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/kol/kolos-wazka.gif'
+            },
+            {
+                'name': 'Arachin\x20Podstępny\x20(225lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/kol/kolos-pajak.gif'
+            },
+            {
+                'name': 'Reuzen\x20(252lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/kol/kolos-dendro.gif'
+            },
+            {
+                'name': 'Wernoradzki\x20Drakolisz\x20(279lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/kol/kolos-drakolisz.gif'
+            },
+            {
+                'name': '--\x20Tytani\x20--',
+                'src': ''
+            },
+            {
+                'name': 'Dziewicza\x20Orlica\x20(51lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/tyt/dziewicza_orlica.gif'
+            },
+            {
+                'name': 'Zabójczy\x20Królik\x20(70lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/tyt/zabojczy_krolik.gif'
+            },
+            {
+                'name': 'Renegat\x20Baulus\x20(101lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/tyt/renegat_baulus.gif'
+            },
+            {
+                'name': 'Piekielny\x20Arcymag\x20(131lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/tyt/archdemon.gif'
+            },
+            {
+                'name': 'Versus\x20Zoons\x20(154lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/tyt/titangoblin.gif'
+            },
+            {
+                'name': 'Łowczyni\x20Wspomnień\x20(177lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/tyt/lowcz-wspo-driady.gif'
+            },
+            {
+                'name': 'Przyzywacz\x20Demonów\x20(204lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/tyt/przyz_demon_sekta.gif'
+            },
+            {
+                'name': 'Maddok\x20Magua\x20(231lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/tyt/maddok-tytan.gif'
+            },
+            {
+                'name': 'Tezcatlipoca\x20(258lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/tyt/tezcatlipoca.gif'
+            },
+            {
+                'name': 'Barbatos\x20Smoczy\x20Strażnik\x20(285lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/tyt/hebrehoth_smokoludzie.gif'
+            },
+            {
+                'name': 'Tanroth\x20(300lvl)',
+                'src': 'https://micc.garmory-cdn.cloud/obrazki/npc/tyt/ice_king.gif'
             }
         ];
-        a['forEach'](n => {
-            const o = n['getAttribute']('data-name'), p = n['getAttribute']('tip-id'), q = document['createElement']('div');
-            q['style']['marginBottom'] = '15px';
-            const r = document['createElement']('p');
-            r['textContent'] = o, q['appendChild'](r);
-            const s = document['createElement']('select');
-            l['forEach'](u => {
-                const v = document['createElement']('option');
-                v['value'] = u['src'], v['textContent'] = u['name'], s['appendChild'](v);
-            }), q['appendChild'](s);
-            const t = localStorage['getItem'](p);
-            t && (s['value'] = t, i(n, t)), s['addEventListener']('change', function () {
-                const u = s['value'];
-                i(n, u), localStorage['setItem'](p, u);
-            }), k['appendChild'](q);
+        _0x1c56a9['forEach'](_0x12e15c => {
+            const _0x57d726 = _0x12e15c['getAttribute']('data-name'), _0x3fc202 = _0x12e15c['getAttribute']('tip-id'), _0x2c6f24 = document['createElement']('div');
+            _0x2c6f24['style']['marginBottom'] = '15px';
+            const _0x2c8c0d = document['createElement']('p');
+            _0x2c8c0d['textContent'] = _0x57d726, _0x2c6f24['appendChild'](_0x2c8c0d);
+            const _0x4ce8da = document['createElement']('select');
+            _0x1fa102['forEach'](_0x3d3839 => {
+                const _0x197105 = document['createElement']('option');
+                _0x197105['value'] = _0x3d3839['src'], _0x197105['textContent'] = _0x3d3839['name'], _0x4ce8da['appendChild'](_0x197105);
+            }), _0x2c6f24['appendChild'](_0x4ce8da);
+            const _0xe3061b = localStorage['getItem'](_0x3fc202);
+            _0xe3061b && (_0x4ce8da['value'] = _0xe3061b, _0x5cb9cd(_0x12e15c, _0xe3061b)), _0x4ce8da['addEventListener']('change', function () {
+                const _0xc76fb0 = _0x4ce8da['value'];
+                _0x5cb9cd(_0x12e15c, _0xc76fb0), localStorage['setItem'](_0x3fc202, _0xc76fb0);
+            }), _0x3daa06['appendChild'](_0x2c6f24);
         });
-        const m = document['createElement']('div');
-        m['style']['marginTop'] = '20px', m['style']['color'] = 'rgba(255,\x20255,\x20255,\x200.8)', m['innerHTML'] = '<p>Wersja\x20skryptu:\x20<strong>' + c + '</strong></p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>Wersja\x20buildu:\x20<strong>' + d + '</strong></p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>Autor:\x20<strong>Kasztanowka</strong></p>', k['appendChild'](m);
+        const _0x17ec0d = document['createElement']('div');
+        _0x17ec0d['style']['marginTop'] = '20px', _0x17ec0d['style']['color'] = 'rgba(255,\x20255,\x20255,\x200.8)', _0x17ec0d['innerHTML'] = '<p>Wersja\x20skryptu:\x20<strong>' + _0x4ec51c + '</strong></p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>Wersja\x20buildu:\x20<strong>' + _0x585559 + '</strong></p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>Autor:\x20<strong>Kasztanowka</strong></p>', _0x3daa06['appendChild'](_0x17ec0d);
     }
-    function i(k, l) {
-        const m = k['querySelector']('canvas.icon.canvas-icon');
-        if (m) {
-            const n = m['getContext']('2d'), o = new Image();
-            o['src'] = l, o['onload'] = function () {
-                n['clearRect'](0x0, 0x0, m['width'], m['height']), n['drawImage'](o, 0x0, 0x0, m['width'], m['height']);
+    function _0x5cb9cd(_0x4163a1, _0x372795) {
+        const _0x270ed2 = _0x4163a1['querySelector']('canvas.icon.canvas-icon');
+        if (_0x270ed2) {
+            const _0x2e57ef = _0x270ed2['getContext']('2d'), _0x25dd27 = new Image();
+            _0x25dd27['src'] = _0x372795, _0x25dd27['onload'] = function () {
+                _0x2e57ef['clearRect'](0x0, 0x0, _0x270ed2['width'], _0x270ed2['height']);
+                const _0x59082e = Math['min'](_0x270ed2['width'] / _0x25dd27['width'], _0x270ed2['height'] / _0x25dd27['height']), _0x22b1e6 = _0x25dd27['width'] * _0x59082e, _0x852ace = _0x25dd27['height'] * _0x59082e, _0x55c307 = (_0x270ed2['width'] - _0x22b1e6) / 0x2, _0x1dce2c = (_0x270ed2['height'] - _0x852ace) / 0x2;
+                _0x2e57ef['drawImage'](_0x25dd27, _0x55c307, _0x1dce2c, _0x22b1e6, _0x852ace);
             };
         }
     }
-    document['addEventListener']('keydown', function (k) {
-        if (k['shiftKey'] && k['key'] === 'Z') {
-            const l = document['getElementById']('kamien-menu');
-            !l && f(), l['style']['display'] = l['style']['display'] === 'none' ? 'block' : 'none', b = l['style']['display'] === 'block';
+    document['addEventListener']('keydown', function (_0x2ec636) {
+        if (_0x2ec636['key'] === ']') {
+            const _0x84e53e = document['getElementById']('kamien-menu');
+            !_0x84e53e && _0x122373(), _0x84e53e['style']['display'] = _0x84e53e['style']['display'] === 'none' ? 'block' : 'none', _0x394c62 = _0x84e53e['style']['display'] === 'block';
         }
-    }), setInterval(e, 0x3e8), setInterval(j, 0x3e8);
-    function j() {
-        a['forEach'](k => {
-            const l = k['getAttribute']('tip-id'), m = localStorage['getItem'](l);
-            m && i(k, m);
+    }), setInterval(_0x1a0ed0, 0x3e8), setInterval(_0x4d3dee, 0x3e8);
+    function _0x4d3dee() {
+        _0x1c56a9['forEach'](_0x451a3e => {
+            const _0x48326e = _0x451a3e['getAttribute']('tip-id'), _0x37f732 = localStorage['getItem'](_0x48326e);
+            _0x37f732 && _0x5cb9cd(_0x451a3e, _0x37f732);
         });
     }
 }());
